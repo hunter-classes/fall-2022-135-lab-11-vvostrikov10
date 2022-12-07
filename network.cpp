@@ -4,6 +4,10 @@
 #include <iostream>
 
 
+bool Network::isFollowing(int i1, int i2){
+    return following[i1][i2];
+}
+
 int Network::findID(std::string usrn){
     for (int i = 0; i < numUsers; i++){
         if (profiles[i].getUsername() == usrn){

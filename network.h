@@ -9,10 +9,12 @@ private:
                                     // mapping integer ID -> Profile
     bool following[MAX_USERS][MAX_USERS];
 
+
+public:
     // Returns user ID (index in the 'profiles' array) by their username
     // (or -1 if username is not found)
     int findID (std::string usrn);
-public:
+    bool isFollowing(int i1, int i2);
     // Constructor, makes an empty network (numUsers = 0)
     Network();
     // Attempts to sign up a new user with specified username and displayname
